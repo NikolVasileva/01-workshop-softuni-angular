@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Theme } from "../../shared/interfaces/theme";
+import { Post } from "../../shared/interfaces/post";
 
 @Injectable({
     providedIn: "root"
@@ -14,5 +15,9 @@ export class ApiService {
 
     getThemes(): Observable<Theme[]> {
         return this.http.get<Theme[]>(`${this.apiUrl}/themes`)
+    }
+
+    getLatestPosts(): Observable<Post[]> {
+        return this.http.get<Post[]>(`${this.apiUrl}/posts?limit=5`)
     }
 }
