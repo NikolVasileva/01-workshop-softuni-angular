@@ -8,7 +8,7 @@ import { ApiService } from '../../../core/services/api.service';
   templateUrl: './themes-list.html',
   styleUrl: './themes-list.css',
 })
-export class ThemesList {
+export class ThemesList implements OnInit{
   themes: Theme[] = [];
 
   constructor(private apiService: ApiService){};
