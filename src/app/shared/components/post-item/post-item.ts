@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { RecentPosts } from '../../../features/home/recent-posts/recent-posts';
+import { Post } from '../../interfaces/post';
+
 
 @Component({
   selector: 'app-post-item',
@@ -8,5 +9,5 @@ import { RecentPosts } from '../../../features/home/recent-posts/recent-posts';
   styleUrl: './post-item.css',
 })
 export class PostItem {
-  @Input({ required: true }) post!: RecentPosts;
+  @Input({ required: true }) post!: Post;
 }
